@@ -1,18 +1,13 @@
-/* =====================================================
-   1. GOOGLE FONTS
-   ===================================================== */
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap');
-
-
-/* =====================================================
-   2. BASIC RESET
-   ===================================================== */
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -24,17 +19,13 @@ body {
 
 img {
   max-width: 100%;
+  height: auto;
   display: block;
 }
 
 a {
   text-decoration: none;
 }
-
-
-/* =====================================================
-   3. COLORS
-   ===================================================== */
 
 :root {
   --purple: #6d4aff;
@@ -55,15 +46,11 @@ a {
   --footer: #111827;
 }
 
-
-/* =====================================================
-   4. HEADER / NAVBAR
-   ===================================================== */
-
 .header {
   width: 100%;
   height: 70px;
   padding: 0 7%;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -77,28 +64,16 @@ a {
   border-bottom: 1px solid #f1f1f5;
 }
 
-
-/* Logo */
-
 .logo {
   display: flex;
   align-items: center;
-  gap: 8px;
-
-  font-family: 'Poppins', sans-serif;
-  font-size: 20px;
-  font-weight: 700;
-
-  color: var(--dark);
 }
 
 .logo img {
-  width: 300px;
-  height: 200px;
+  width: 145px;
+  height: auto;
+  display: block;
 }
-
-
-/* Navigation */
 
 .nav {
   display: flex;
@@ -112,15 +87,12 @@ a {
   font-weight: 500;
   color: #64748b;
 
-  transition: 0.3s;
+  transition: color 0.3s ease;
 }
 
 .nav a:hover {
   color: var(--purple);
 }
-
-
-/* Get Started button */
 
 .nav-button {
   border: none;
@@ -140,10 +112,13 @@ a {
   cursor: pointer;
 
   box-shadow: 0 5px 18px rgba(109, 74, 255, 0.25);
+
+  transition: transform 0.3s ease;
 }
 
-
-/* Mobile menu button */
+.nav-button:hover {
+  transform: translateY(-2px);
+}
 
 .menu-toggle {
   display: none;
@@ -157,11 +132,6 @@ a {
 
   cursor: pointer;
 }
-
-
-/* =====================================================
-   5. HERO SECTION
-   ===================================================== */
 
 .hero {
   width: 90%;
@@ -178,15 +148,9 @@ a {
   gap: 60px;
 }
 
-
-/* Hero text area */
-
 .hero-content {
   flex: 1;
 }
-
-
-/* Small label */
 
 .hero-label {
   display: inline-block;
@@ -207,9 +171,6 @@ a {
   letter-spacing: 0.7px;
 }
 
-
-/* Main heading */
-
 .hero h1 {
   margin-bottom: 20px;
 
@@ -227,10 +188,9 @@ a {
 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+
+  background-clip: text;
 }
-
-
-/* Hero paragraph */
 
 .hero-text {
   max-width: 470px;
@@ -244,9 +204,6 @@ a {
 
   line-height: 1.7;
 }
-
-
-/* Hero buttons */
 
 .hero-buttons {
   display: flex;
@@ -266,10 +223,9 @@ a {
   font-weight: 600;
 
   cursor: pointer;
+
+  transition: 0.3s ease;
 }
-
-
-/* Main button */
 
 .primary-btn {
   border: none;
@@ -281,8 +237,9 @@ a {
   box-shadow: 0 6px 18px rgba(109, 74, 255, 0.25);
 }
 
-
-/* Secondary button */
+.primary-btn:hover {
+  transform: translateY(-2px);
+}
 
 .secondary-btn {
   border: 1px solid #ddd9e8;
@@ -292,8 +249,10 @@ a {
   color: var(--dark);
 }
 
-
-/* Hero benefits */
+.secondary-btn:hover {
+  border-color: var(--purple);
+  color: var(--purple);
+}
 
 .hero-benefits {
   display: flex;
@@ -306,9 +265,6 @@ a {
   font-weight: 500;
 }
 
-
-/* Hero image */
-
 .hero-image {
   flex: 1;
   max-width: 550px;
@@ -317,11 +273,6 @@ a {
 .hero-image img {
   width: 100%;
 }
-
-
-/* =====================================================
-   6. FEATURES SECTION
-   ===================================================== */
 
 .features {
   width: 90%;
@@ -334,17 +285,11 @@ a {
   text-align: center;
 }
 
-
-/* Features heading area */
-
 .features-header {
   max-width: 650px;
 
   margin: 0 auto 50px;
 }
-
-
-/* Small section label */
 
 .features-label,
 .testimonials-label {
@@ -363,9 +308,6 @@ a {
 .testimonials-label span {
   color: var(--pink);
 }
-
-
-/* Section headings */
 
 .features-header h2,
 .testimonials-header h2 {
@@ -386,10 +328,9 @@ a {
 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+
+  background-clip: text;
 }
-
-
-/* Section paragraph */
 
 .features-text,
 .testimonials-text {
@@ -400,9 +341,6 @@ a {
 
   line-height: 1.7;
 }
-
-
-/* Feature cards */
 
 .features-grid {
   display: grid;
@@ -423,7 +361,7 @@ a {
 
   border-radius: 16px;
 
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 
 .feature-card:hover {
@@ -431,9 +369,6 @@ a {
 
   box-shadow: 0 15px 35px rgba(50, 40, 100, 0.08);
 }
-
-
-/* Feature icon */
 
 .feature-icon {
   width: 46px;
@@ -452,9 +387,6 @@ a {
   font-size: 20px;
 }
 
-
-/* Feature title */
-
 .feature-card h3 {
   margin-bottom: 10px;
 
@@ -465,9 +397,6 @@ a {
   color: var(--dark);
 }
 
-
-/* Feature paragraph */
-
 .feature-card p {
   color: var(--text);
 
@@ -475,11 +404,6 @@ a {
 
   line-height: 1.7;
 }
-
-
-/* =====================================================
-   7. TESTIMONIALS SECTION
-   ===================================================== */
 
 .testimonials {
   width: 90%;
@@ -497,9 +421,6 @@ a {
 
   margin: 0 auto 50px;
 }
-
-
-/* Testimonials cards */
 
 .testimonials-grid {
   display: grid;
@@ -520,7 +441,7 @@ a {
 
   border-radius: 16px;
 
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 
 .testimonial-card:hover {
@@ -528,9 +449,6 @@ a {
 
   box-shadow: 0 15px 35px rgba(50, 40, 100, 0.08);
 }
-
-
-/* Stars */
 
 .stars {
   margin-bottom: 18px;
@@ -540,9 +458,6 @@ a {
   font-size: 15px;
   letter-spacing: 2px;
 }
-
-
-/* Quote */
 
 .testimonial-quote {
   margin-bottom: 25px;
@@ -554,9 +469,6 @@ a {
   line-height: 1.7;
 }
 
-
-/* User information */
-
 .testimonial-user {
   display: flex;
   align-items: center;
@@ -567,14 +479,18 @@ a {
 .user-avatar {
   width: 42px;
   height: 42px;
+
   border-radius: 50%;
+
   overflow: hidden;
+
   flex-shrink: 0;
 }
 
 .user-avatar img {
   width: 100%;
   height: 100%;
+
   object-fit: cover;
   display: block;
 }
@@ -593,11 +509,6 @@ a {
 
   font-size: 12px;
 }
-
-
-/* =====================================================
-   8. CTA SECTION
-   ===================================================== */
 
 .cta {
   width: 90%;
@@ -622,9 +533,6 @@ a {
   color: white;
 }
 
-
-/* CTA heading */
-
 .cta-content h2 {
   margin-bottom: 12px;
 
@@ -635,9 +543,6 @@ a {
   line-height: 1.25;
 }
 
-
-/* CTA paragraph */
-
 .cta-text {
   max-width: 520px;
 
@@ -647,9 +552,6 @@ a {
 
   line-height: 1.6;
 }
-
-
-/* CTA buttons */
 
 .cta-buttons {
   display: flex;
@@ -669,10 +571,9 @@ a {
   font-weight: 600;
 
   cursor: pointer;
+
+  transition: 0.3s ease;
 }
-
-
-/* White CTA button */
 
 .cta-primary {
   border: none;
@@ -682,8 +583,9 @@ a {
   color: var(--purple);
 }
 
-
-/* Transparent CTA button */
+.cta-primary:hover {
+  transform: translateY(-2px);
+}
 
 .cta-secondary {
   border: 1px solid rgba(255, 255, 255, 0.5);
@@ -693,10 +595,9 @@ a {
   color: white;
 }
 
-
-/* =====================================================
-   9. FOOTER
-   ===================================================== */
+.cta-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
 
 .footer {
   padding: 65px 7% 25px;
@@ -705,9 +606,6 @@ a {
 
   color: #94a3b8;
 }
-
-
-/* Footer layout */
 
 .footer-container {
   max-width: 1200px;
@@ -721,17 +619,13 @@ a {
   gap: 50px;
 }
 
-
-/* Footer logo */
-
 .footer-brand .logo {
   margin-bottom: 15px;
-
-  color: white;
 }
 
-
-/* Footer description */
+.footer-brand .logo img {
+  width: 145px;
+}
 
 .footer-brand p {
   max-width: 280px;
@@ -742,9 +636,6 @@ a {
 
   line-height: 1.7;
 }
-
-
-/* Social icons */
 
 .social-links {
   display: flex;
@@ -767,15 +658,12 @@ a {
 
   font-size: 13px;
 
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 
 .social-links a:hover {
   background: rgba(255, 255, 255, 0.18);
 }
-
-
-/* Footer columns */
 
 .footer-links {
   display: contents;
@@ -809,9 +697,6 @@ a {
   color: white;
 }
 
-
-/* Footer bottom */
-
 .footer-bottom {
   max-width: 1200px;
 
@@ -829,11 +714,6 @@ a {
 
   font-size: 12px;
 }
-
-
-/* =====================================================
-   10. TABLET RESPONSIVE
-   ===================================================== */
 
 @media (max-width: 950px) {
 
@@ -860,16 +740,10 @@ a {
   .cta-content h2 {
     font-size: 30px;
   }
+
 }
 
-
-/* =====================================================
-   11. MOBILE RESPONSIVE
-   ===================================================== */
-
 @media (max-width: 768px) {
-
-  /* Header */
 
   .header {
     height: 65px;
@@ -879,15 +753,18 @@ a {
     position: relative;
   }
 
+  .logo img {
+    width: 130px;
+    height: auto;
+  }
+
   .nav-button {
     display: none;
   }
 
   .menu-btn {
     display: block;
-  }
-
-  /* Mobile navigation */
+  }  
 
   .nav {
     display: none;
@@ -913,9 +790,6 @@ a {
   .menu-toggle:checked ~ .nav {
     display: flex;
   }
-
-
-  /* Hero */
 
   .hero {
     width: 88%;
@@ -962,9 +836,6 @@ a {
     width: 100%;
   }
 
-
-  /* Features */
-
   .features {
     width: 88%;
 
@@ -991,9 +862,6 @@ a {
     margin-right: auto;
   }
 
-
-  /* Testimonials */
-
   .testimonials {
     width: 88%;
 
@@ -1013,9 +881,6 @@ a {
   .testimonial-user {
     justify-content: center;
   }
-
-
-  /* CTA */
 
   .cta {
     width: 90%;
@@ -1052,9 +917,6 @@ a {
     width: 100%;
   }
 
-
-  /* Footer */
-
   .footer {
     padding: 50px 20px 25px;
   }
@@ -1074,6 +936,14 @@ a {
     margin-right: auto;
   }
 
+  .footer-brand .logo {
+    justify-content: center;
+  }
+
+  .footer-brand .logo img {
+    width: 130px;
+  }
+
   .social-links {
     justify-content: center;
   }
@@ -1091,22 +961,21 @@ a {
   .footer-bottom {
     margin-top: 35px;
   }
+
 }
-
-
-/* =====================================================
-   12. SMALL PHONES
-   ===================================================== */
 
 @media (max-width: 480px) {
 
-  .logo {
-    font-size: 18px;
+  .header {
+    padding: 0 16px;
   }
 
   .logo img {
-    width: 27px;
-    height: 27px;
+    width: 125px;
+  }
+
+  .menu-btn {
+    font-size: 23px;
   }
 
   .hero h1 {
