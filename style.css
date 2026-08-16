@@ -1,0 +1,1129 @@
+/* =====================================================
+   1. GOOGLE FONTS
+   ===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap');
+
+
+/* =====================================================
+   2. BASIC RESET
+   ===================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #1e1b4b;
+  background: #ffffff;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+/* =====================================================
+   3. COLORS
+   ===================================================== */
+
+:root {
+  --purple: #6d4aff;
+  --pink: #ed4b9b;
+
+  --gradient: linear-gradient(
+    135deg,
+    #6d4aff 0%,
+    #b84df1 50%,
+    #ed4b9b 100%
+  );
+
+  --dark: #1e1b4b;
+  --text: #64748b;
+  --light-purple: #f3edff;
+  --border: #e9e7f2;
+  --white: #ffffff;
+  --footer: #111827;
+}
+
+
+/* =====================================================
+   4. HEADER / NAVBAR
+   ===================================================== */
+
+.header {
+  width: 100%;
+  height: 70px;
+  padding: 0 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: #ffffff;
+
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  border-bottom: 1px solid #f1f1f5;
+}
+
+
+/* Logo */
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+
+  color: var(--dark);
+}
+
+.logo img {
+  width: 300px;
+  height: 200px;
+}
+
+
+/* Navigation */
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav a {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #64748b;
+
+  transition: 0.3s;
+}
+
+.nav a:hover {
+  color: var(--purple);
+}
+
+
+/* Get Started button */
+
+.nav-button {
+  border: none;
+
+  padding: 10px 22px;
+
+  border-radius: 20px;
+
+  color: white;
+
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+
+  background: var(--gradient);
+
+  cursor: pointer;
+
+  box-shadow: 0 5px 18px rgba(109, 74, 255, 0.25);
+}
+
+
+/* Mobile menu button */
+
+.menu-toggle {
+  display: none;
+}
+
+.menu-btn {
+  display: none;
+
+  font-size: 25px;
+  color: var(--dark);
+
+  cursor: pointer;
+}
+
+
+/* =====================================================
+   5. HERO SECTION
+   ===================================================== */
+
+.hero {
+  width: 90%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  padding: 75px 0 85px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 60px;
+}
+
+
+/* Hero text area */
+
+.hero-content {
+  flex: 1;
+}
+
+
+/* Small label */
+
+.hero-label {
+  display: inline-block;
+
+  padding: 6px 14px;
+
+  margin-bottom: 20px;
+
+  border-radius: 20px;
+
+  background: var(--light-purple);
+  color: var(--purple);
+
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 0.7px;
+}
+
+
+/* Main heading */
+
+.hero h1 {
+  margin-bottom: 20px;
+
+  font-family: 'Poppins', sans-serif;
+  font-size: 52px;
+  font-weight: 800;
+
+  line-height: 1.15;
+
+  color: var(--dark);
+}
+
+.hero h1 span {
+  background: var(--gradient);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* Hero paragraph */
+
+.hero-text {
+  max-width: 470px;
+
+  margin-bottom: 30px;
+
+  color: var(--text);
+
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+
+  line-height: 1.7;
+}
+
+
+/* Hero buttons */
+
+.hero-buttons {
+  display: flex;
+  gap: 14px;
+
+  margin-bottom: 25px;
+}
+
+.primary-btn,
+.secondary-btn {
+  padding: 13px 24px;
+
+  border-radius: 25px;
+
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+
+/* Main button */
+
+.primary-btn {
+  border: none;
+
+  color: white;
+
+  background: var(--gradient);
+
+  box-shadow: 0 6px 18px rgba(109, 74, 255, 0.25);
+}
+
+
+/* Secondary button */
+
+.secondary-btn {
+  border: 1px solid #ddd9e8;
+
+  background: white;
+
+  color: var(--dark);
+}
+
+
+/* Hero benefits */
+
+.hero-benefits {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+
+  color: var(--text);
+
+  font-size: 12px;
+  font-weight: 500;
+}
+
+
+/* Hero image */
+
+.hero-image {
+  flex: 1;
+  max-width: 550px;
+}
+
+.hero-image img {
+  width: 100%;
+}
+
+
+/* =====================================================
+   6. FEATURES SECTION
+   ===================================================== */
+
+.features {
+  width: 90%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  padding: 85px 0;
+
+  text-align: center;
+}
+
+
+/* Features heading area */
+
+.features-header {
+  max-width: 650px;
+
+  margin: 0 auto 50px;
+}
+
+
+/* Small section label */
+
+.features-label,
+.testimonials-label {
+  margin-bottom: 12px;
+
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+
+  color: var(--purple);
+}
+
+.features-label span,
+.testimonials-label span {
+  color: var(--pink);
+}
+
+
+/* Section headings */
+
+.features-header h2,
+.testimonials-header h2 {
+  margin-bottom: 16px;
+
+  font-family: 'Poppins', sans-serif;
+  font-size: 38px;
+  font-weight: 700;
+
+  line-height: 1.25;
+
+  color: var(--dark);
+}
+
+.features-header h2 span,
+.testimonials-header h2 span {
+  background: var(--gradient);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* Section paragraph */
+
+.features-text,
+.testimonials-text {
+  color: var(--text);
+
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+
+  line-height: 1.7;
+}
+
+
+/* Feature cards */
+
+.features-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 25px;
+}
+
+.feature-card {
+  padding: 32px 28px;
+
+  text-align: left;
+
+  background: white;
+
+  border: 1px solid var(--border);
+
+  border-radius: 16px;
+
+  transition: 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow: 0 15px 35px rgba(50, 40, 100, 0.08);
+}
+
+
+/* Feature icon */
+
+.feature-icon {
+  width: 46px;
+  height: 46px;
+
+  margin-bottom: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background: var(--light-purple);
+
+  font-size: 20px;
+}
+
+
+/* Feature title */
+
+.feature-card h3 {
+  margin-bottom: 10px;
+
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+
+  color: var(--dark);
+}
+
+
+/* Feature paragraph */
+
+.feature-card p {
+  color: var(--text);
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+/* =====================================================
+   7. TESTIMONIALS SECTION
+   ===================================================== */
+
+.testimonials {
+  width: 90%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  padding: 85px 0;
+
+  text-align: center;
+}
+
+.testimonials-header {
+  max-width: 650px;
+
+  margin: 0 auto 50px;
+}
+
+
+/* Testimonials cards */
+
+.testimonials-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 25px;
+}
+
+.testimonial-card {
+  padding: 30px;
+
+  text-align: left;
+
+  background: white;
+
+  border: 1px solid var(--border);
+
+  border-radius: 16px;
+
+  transition: 0.3s;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow: 0 15px 35px rgba(50, 40, 100, 0.08);
+}
+
+
+/* Stars */
+
+.stars {
+  margin-bottom: 18px;
+
+  color: #f59e0b;
+
+  font-size: 15px;
+  letter-spacing: 2px;
+}
+
+
+/* Quote */
+
+.testimonial-quote {
+  margin-bottom: 25px;
+
+  color: #475569;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+/* User information */
+
+.testimonial-user {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+}
+
+.user-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.user-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.testimonial-user h4 {
+  margin-bottom: 2px;
+
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+
+  color: var(--dark);
+}
+
+.testimonial-user p {
+  color: var(--text);
+
+  font-size: 12px;
+}
+
+
+/* =====================================================
+   8. CTA SECTION
+   ===================================================== */
+
+.cta {
+  width: 90%;
+  max-width: 1200px;
+
+  margin: 40px auto 80px;
+}
+
+.cta-card {
+  padding: 55px 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 40px;
+
+  border-radius: 22px;
+
+  background: var(--gradient);
+
+  color: white;
+}
+
+
+/* CTA heading */
+
+.cta-content h2 {
+  margin-bottom: 12px;
+
+  font-family: 'Poppins', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+
+  line-height: 1.25;
+}
+
+
+/* CTA paragraph */
+
+.cta-text {
+  max-width: 520px;
+
+  color: rgba(255, 255, 255, 0.88);
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+
+/* CTA buttons */
+
+.cta-buttons {
+  display: flex;
+  gap: 14px;
+
+  flex-shrink: 0;
+}
+
+.cta-primary,
+.cta-secondary {
+  padding: 13px 24px;
+
+  border-radius: 25px;
+
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+
+/* White CTA button */
+
+.cta-primary {
+  border: none;
+
+  background: white;
+
+  color: var(--purple);
+}
+
+
+/* Transparent CTA button */
+
+.cta-secondary {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+
+  background: transparent;
+
+  color: white;
+}
+
+
+/* =====================================================
+   9. FOOTER
+   ===================================================== */
+
+.footer {
+  padding: 65px 7% 25px;
+
+  background: var(--footer);
+
+  color: #94a3b8;
+}
+
+
+/* Footer layout */
+
+.footer-container {
+  max-width: 1200px;
+
+  margin: 0 auto 50px;
+
+  display: grid;
+
+  grid-template-columns: 2fr repeat(3, 1fr);
+
+  gap: 50px;
+}
+
+
+/* Footer logo */
+
+.footer-brand .logo {
+  margin-bottom: 15px;
+
+  color: white;
+}
+
+
+/* Footer description */
+
+.footer-brand p {
+  max-width: 280px;
+
+  margin-bottom: 20px;
+
+  font-size: 13px;
+
+  line-height: 1.7;
+}
+
+
+/* Social icons */
+
+.social-links {
+  display: flex;
+  gap: 10px;
+}
+
+.social-links a {
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  color: white;
+
+  font-size: 13px;
+
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+
+/* Footer columns */
+
+.footer-links {
+  display: contents;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+.footer-column h4 {
+  margin-bottom: 8px;
+
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+
+  color: white;
+}
+
+.footer-column a {
+  color: #94a3b8;
+
+  font-size: 13px;
+
+  transition: 0.3s;
+}
+
+.footer-column a:hover {
+  color: white;
+}
+
+
+/* Footer bottom */
+
+.footer-bottom {
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  padding-top: 22px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+  text-align: center;
+}
+
+.footer-bottom p {
+  color: #64748b;
+
+  font-size: 12px;
+}
+
+
+/* =====================================================
+   10. TABLET RESPONSIVE
+   ===================================================== */
+
+@media (max-width: 950px) {
+
+  .header {
+    padding: 0 5%;
+  }
+
+  .nav {
+    gap: 20px;
+  }
+
+  .hero {
+    gap: 35px;
+  }
+
+  .hero h1 {
+    font-size: 44px;
+  }
+
+  .cta-card {
+    padding: 45px 40px;
+  }
+
+  .cta-content h2 {
+    font-size: 30px;
+  }
+}
+
+
+/* =====================================================
+   11. MOBILE RESPONSIVE
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+  /* Header */
+
+  .header {
+    height: 65px;
+
+    padding: 0 20px;
+
+    position: relative;
+  }
+
+  .nav-button {
+    display: none;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  /* Mobile navigation */
+
+  .nav {
+    display: none;
+
+    position: absolute;
+
+    top: 65px;
+    left: 0;
+
+    width: 100%;
+
+    padding: 20px;
+
+    flex-direction: column;
+
+    gap: 16px;
+
+    background: white;
+
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  .menu-toggle:checked ~ .nav {
+    display: flex;
+  }
+
+
+  /* Hero */
+
+  .hero {
+    width: 88%;
+
+    padding: 55px 0 70px;
+
+    flex-direction: column;
+
+    text-align: center;
+
+    gap: 40px;
+  }
+
+  .hero h1 {
+    font-size: 38px;
+  }
+
+  .hero-text {
+    margin: 0 auto 28px;
+
+    font-size: 14px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+
+    align-items: center;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    width: 100%;
+  }
+
+  .hero-benefits {
+    justify-content: center;
+
+    gap: 8px;
+
+    flex-direction: column;
+  }
+
+  .hero-image {
+    width: 100%;
+  }
+
+
+  /* Features */
+
+  .features {
+    width: 88%;
+
+    padding: 65px 0;
+  }
+
+  .features-header h2,
+  .testimonials-header h2 {
+    font-size: 30px;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+  .feature-card {
+    text-align: center;
+  }
+
+  .feature-icon {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  /* Testimonials */
+
+  .testimonials {
+    width: 88%;
+
+    padding: 65px 0;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+  .testimonial-card {
+    text-align: center;
+  }
+
+  .testimonial-user {
+    justify-content: center;
+  }
+
+
+  /* CTA */
+
+  .cta {
+    width: 90%;
+
+    margin: 30px auto 60px;
+  }
+
+  .cta-card {
+    padding: 45px 22px;
+
+    flex-direction: column;
+
+    text-align: center;
+
+    gap: 25px;
+  }
+
+  .cta-content h2 {
+    font-size: 28px;
+  }
+
+  .cta-text {
+    margin: 0 auto;
+  }
+
+  .cta-buttons {
+    width: 100%;
+
+    flex-direction: column;
+  }
+
+  .cta-primary,
+  .cta-secondary {
+    width: 100%;
+  }
+
+
+  /* Footer */
+
+  .footer {
+    padding: 50px 20px 25px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+
+    text-align: center;
+  }
+
+  .footer-brand p {
+    max-width: 100%;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+
+  .footer-links {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+
+    text-align: center;
+  }
+
+  .footer-bottom {
+    margin-top: 35px;
+  }
+}
+
+
+/* =====================================================
+   12. SMALL PHONES
+   ===================================================== */
+
+@media (max-width: 480px) {
+
+  .logo {
+    font-size: 18px;
+  }
+
+  .logo img {
+    width: 27px;
+    height: 27px;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .hero-label {
+    font-size: 10px;
+  }
+
+  .features-header h2,
+  .testimonials-header h2 {
+    font-size: 27px;
+  }
+
+  .footer-links {
+    grid-template-columns: 1fr;
+  }
+
+}
