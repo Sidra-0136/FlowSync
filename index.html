@@ -3,240 +3,717 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <meta name="description" content="FlowSync helps teams manage projects, collaborate in real time, and stay productive from anywhere.">
+  <meta name="keywords" content="FlowSync, workflow management, project management, team collaboration, productivity">
+  <meta name="author" content="FlowSync">
+
+  <title>FlowSync — Smart Workflow Management</title>
+
   <link rel="stylesheet" href="style.css">
-  <title>FlowSync</title>
 </head>
+
 <body>
 
-  <!-- HEADER -->
   <header class="header">
-    <div class="logo">
-      <img src="./assets/logo.png" alt="FlowSync logo">
-    </div>
 
-    <!-- Pure CSS Toggle using Checkbox -->
-    <input type="checkbox" id="menu-toggle" class="menu-toggle">
-    <label for="menu-toggle" class="menu-btn">☰</label>
+  <div class="logo">
+    <img src="./assets/logo.png" alt="FlowSync logo">
+  </div>
 
-    <nav class="nav">
-      <a href="#home">Home</a>
-      <a href="#features">Features</a>
-      <a href="#testimonials">Testimonials</a>
-      <a href="#">Pricing</a>
-      <a href="#">Contact</a>
-    </nav>
+  <nav class="nav" id="mainNav">
+    <a href="#home">Home</a>
+    <a href="#features">Features</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-    <button class="nav-button">Get Started</button>
-  </header>
+  <div class="header-actions">
 
-  <!-- HERO SECTION -->
-  <section class="hero" id="home">
-    <div class="hero-content">
-      <span class="hero-label">Smart Workflow Management</span>
+    <button
+      id="themeToggle"
+      class="theme-toggle"
+      type="button"
+      aria-label="Switch to dark mode"
+    >
+      🌙
+    </button>
 
-      <h1>
-        Work Smarter.<br>
-        Stay <span>Organized.</span>
-      </h1>
+    <button class="nav-button">
+      Get Started
+    </button>
 
-      <p class="hero-text">
-        FlowSync helps teams manage projects, collaborate in real time, and stay productive from anywhere.
-      </p>
+    <button
+      id="menuBtn"
+      class="menu-btn"
+      type="button"
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+    >
+      ☰
+    </button>
 
-      <div class="hero-buttons">
-        <button class="primary-btn">Get Started Free</button>
-        <button class="secondary-btn">▶ Watch Demo</button>
-      </div>
+  </div>
 
-      <div class="hero-benefits">
-        <span>✓ No Credit Card</span>
-        <span>✓ Free 14-Day Trial</span>
-        <span>✓ Cancel Anytime</span>
-      </div>
-    </div>
+</header>
 
-    <div class="hero-image">
-      <img src="./assets/dashboard.png" alt="FlowSync dashboard">
-    </div>
-  </section>
+  <main>
 
-  <!-- FEATURES SECTION -->
-  <section class="features" id="features">
-    <div class="features-header">
-      <p class="features-label">FEATURE<span>S</span></p>
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="home">
 
-      <h2>
-        Everything You Need To<br>
-        <span>Stay Productive</span>
-      </h2>
+      <div class="hero-content">
 
-      <p class="features-text">
-        Powerful features designed to help your team plan, collaborate, and deliver projects faster.
-      </p>
-    </div>
+        <span class="hero-label">
+          Smart Workflow Management
+        </span>
 
-    <div class="features-grid">
-      <div class="feature-card">
-        <div class="feature-icon">📋</div>
-        <h3>Smart Task Management</h3>
-        <p>
-          Organize tasks, assign priorities, and track progress with an intuitive dashboard.
+        <h1>
+          Work Smarter.<br>
+          Stay <span>Organized.</span>
+        </h1>
+
+        <p class="hero-text">
+          FlowSync helps teams manage projects, collaborate in real time,
+          and stay productive from anywhere.
         </p>
-      </div>
 
-      <div class="feature-card">
-        <div class="feature-icon">👥</div>
-        <h3>Team Collaboration</h3>
-        <p>
-          Collaborate in real time with comments, file sharing, mentions, and instant updates.
-        </p>
-      </div>
+        <div class="hero-buttons">
 
-      <div class="feature-card">
-        <div class="feature-icon">📊</div>
-        <h3>Analytics & Insights</h3>
-        <p>
-          Collaborate in real time with comments, file sharing, mentions, and instant updates.
-        </p>
-      </div>
-    </div>
-  </section>
+          <a href="#contact" class="primary-btn">
+            Get Started Free
+          </a>
 
-  <!-- TESTIMONIALS SECTION -->
-  <section class="testimonials" id="testimonials">
-    <div class="testimonials-header">
-      <p class="testimonials-label">TESTIMONIAL<span>S</span></p>
+          <button
+            class="secondary-btn"
+            id="demoBtn"
+            type="button"
+          >
+            ▶ Watch Demo
+          </button>
 
-      <h2>
-        Loved By Teams Around The <span>World</span>
-      </h2>
-
-      <p class="testimonials-text">
-        See how businesses are boosting productivity and collaboration with FlowSync.
-      </p>
-    </div>
-
-    <div class="testimonials-grid">
-      <div class="testimonial-card">
-        <div class="stars">★★★★★</div>
-        <p class="testimonial-quote">
-          "FlowSync has completely transformed the way our team collaborates. It's simple, fast, and incredibly intuitive."
-        </p>
-        <div class="testimonial-user">
-          <div class="user-avatar">
-            <img src="./assets/219.jpg" alt="Sarah">
-          </div>
-          <div>
-            <h4>Sarah Johnson</h4>
-            <p>Product Manager</p>
-          </div>
         </div>
-      </div>
 
-      <div class="testimonial-card">
-        <div class="stars">★★★★★</div>
-        <p class="testimonial-quote">
-          "Managing projects has never been easier. The clean interface and powerful features save us hours every week."
-        </p>
-        <div class="testimonial-user">
-          <div class="user-avatar">
-            <img src="./assets/222.jpg" alt="Michael">
-          </div>
-          <div>
-            <h4>Michael Chen</h4>
-            <p>Startup Founder</p>
-          </div>
+        <div class="hero-benefits">
+          <span>✓ No Credit Card</span>
+          <span>✓ Free 14-Day Trial</span>
+          <span>✓ Cancel Anytime</span>
         </div>
+
       </div>
 
-      <div class="testimonial-card">
-        <div class="stars">★★★★★</div>
-        <p class="testimonial-quote">
-          "The best productivity platform we've used. Our entire workflow is now more organized and efficient."
+
+      <div class="hero-image">
+        <img
+          src="./assets/dashboard.png"
+          alt="FlowSync dashboard"
+        >
+      </div>
+
+    </section>
+
+
+    <!-- ================= FEATURES ================= -->
+    <section class="features section" id="features">
+
+      <div class="features-header">
+
+        <p class="features-label">
+          FEATURE<span>S</span>
         </p>
-        <div class="testimonial-user">
-          <div class="user-avatar">
-            <img src="./assets/217.jpg" alt="Emily">
-          </div>
-          <div>
-            <h4>Emily Davis</h4>
-            <p>Marketing Lead</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- CTA BANNER -->
-  <section class="cta" id="contact">
-    <div class="cta-card">
-      <div class="cta-content">
         <h2>
-          Ready to boost your<br>
-          team productivity?
+          Everything You Need To<br>
+          <span>Stay Productive</span>
         </h2>
-        <p class="cta-text">
-          Join thousands of teams already using FlowSync to get more done every day.
+
+        <p class="features-text">
+          Powerful features designed to help your team plan,
+          collaborate, and deliver projects faster.
         </p>
+
       </div>
 
-      <div class="cta-buttons">
-        <button class="cta-primary">Get Started Free</button>
-        <button class="cta-secondary">Watch Demo</button>
+
+      <div class="features-grid">
+
+        <div class="feature-card">
+
+          <div class="feature-icon">
+            📋
+          </div>
+
+          <h3>
+            Smart Task Management
+          </h3>
+
+          <p>
+            Organize tasks, assign priorities, and track progress
+            with an intuitive dashboard.
+          </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+          <div class="feature-icon">
+            👥
+          </div>
+
+          <h3>
+            Team Collaboration
+          </h3>
+
+          <p>
+            Collaborate in real time with comments, file sharing,
+            mentions, and instant updates.
+          </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+          <div class="feature-icon">
+            📊
+          </div>
+
+          <h3>
+            Analytics & Insights
+          </h3>
+
+          <p>
+            Understand project performance with clear insights
+            that help your team make better decisions.
+          </p>
+
+        </div>
+
       </div>
+
+    </section>
+
+
+    <!-- ================= FAQ ================= -->
+    <section class="faq section" id="faq">
+
+      <div class="section-header">
+
+        <p class="features-label">
+          FAQ
+        </p>
+
+        <h2>
+          Frequently Asked <span>Questions</span>
+        </h2>
+
+        <p class="features-text">
+          Quick answers to common questions about FlowSync.
+        </p>
+
+      </div>
+
+
+      <div class="faq-list">
+
+        <div class="faq-item">
+
+          <button class="faq-question" type="button">
+            <span>
+              What is FlowSync?
+            </span>
+
+            <span class="faq-icon">
+              +
+            </span>
+          </button>
+
+          <div class="faq-answer">
+            <p>
+              FlowSync is an all-in-one workspace that helps
+              teams organize tasks, manage projects and collaborate.
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="faq-item">
+
+          <button class="faq-question" type="button">
+            <span>
+              Can I try FlowSync for free?
+            </span>
+
+            <span class="faq-icon">
+              +
+            </span>
+          </button>
+
+          <div class="faq-answer">
+            <p>
+              Yes! FlowSync offers a free 14-day trial with
+              no credit card required.
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="faq-item">
+
+          <button class="faq-question" type="button">
+            <span>
+              Is FlowSync suitable for remote teams?
+            </span>
+
+            <span class="faq-icon">
+              +
+            </span>
+          </button>
+
+          <div class="faq-answer">
+            <p>
+              Yes. FlowSync helps remote teams collaborate,
+              organize tasks and track projects from anywhere.
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="faq-item">
+
+          <button class="faq-question" type="button">
+            <span>
+              Can I cancel anytime?
+            </span>
+
+            <span class="faq-icon">
+              +
+            </span>
+          </button>
+
+          <div class="faq-answer">
+            <p>
+              Yes. You can cancel your FlowSync plan whenever
+              you need to.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= TESTIMONIALS ================= -->
+    <section class="testimonials section" id="testimonials">
+
+      <div class="testimonials-header">
+
+        <p class="testimonials-label">
+          TESTIMONIAL<span>S</span>
+        </p>
+
+        <h2>
+          Loved By Teams Around The
+          <span>World</span>
+        </h2>
+
+        <p class="testimonials-text">
+          See how businesses are boosting productivity and
+          collaboration with FlowSync.
+        </p>
+
+      </div>
+
+
+      <div class="testimonials-grid">
+
+        <div class="testimonial-card">
+
+          <div class="stars">
+            ★★★★★
+          </div>
+
+          <p class="testimonial-quote">
+            "FlowSync has completely transformed the way our team
+            collaborates. It's simple, fast, and incredibly intuitive."
+          </p>
+
+          <div class="testimonial-user">
+
+            <div class="user-avatar">
+              <img
+                src="./assets/219.jpg"
+                alt="Sarah Johnson"
+              >
+            </div>
+
+            <div>
+              <h4>
+                Sarah Johnson
+              </h4>
+
+              <p>
+                Product Manager
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="testimonial-card">
+
+          <div class="stars">
+            ★★★★★
+          </div>
+
+          <p class="testimonial-quote">
+            "Managing projects has never been easier. The clean
+            interface and powerful features save us hours every week."
+          </p>
+
+          <div class="testimonial-user">
+
+            <div class="user-avatar">
+              <img
+                src="./assets/222.jpg"
+                alt="Michael Chen"
+              >
+            </div>
+
+            <div>
+              <h4>
+                Michael Chen
+              </h4>
+
+              <p>
+                Startup Founder
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="testimonial-card">
+
+          <div class="stars">
+            ★★★★★
+          </div>
+
+          <p class="testimonial-quote">
+            "The best productivity platform we've used.
+            Our entire workflow is now more organized and efficient."
+          </p>
+
+          <div class="testimonial-user">
+
+            <div class="user-avatar">
+              <img
+                src="./assets/217.jpg"
+                alt="Emily Davis"
+              >
+            </div>
+
+            <div>
+              <h4>
+                Emily Davis
+              </h4>
+
+              <p>
+                Marketing Lead
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT FORM ================= -->
+    <section class="contact section" id="contact">
+
+      <div class="contact-card">
+
+        <div class="contact-copy">
+
+          <p class="features-label">
+            GET STARTED
+          </p>
+
+          <h2>
+            Let's build a more
+            <span>productive workflow.</span>
+          </h2>
+
+          <p>
+            Fill out the form and we'll get back to you.
+          </p>
+
+        </div>
+
+
+        <form id="contactForm" class="contact-form" novalidate>
+
+          <div class="form-group">
+
+            <label for="name">
+              Full Name
+            </label>
+
+            <input
+              type="text"
+              id="name"
+              placeholder="Your name"
+              required
+            >
+
+            <small id="nameMessage"></small>
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label for="email">
+              Email Address
+            </label>
+
+            <input
+              type="email"
+              id="email"
+              placeholder="you@example.com"
+              required
+            >
+
+            <small id="emailMessage"></small>
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label for="message">
+              Message
+            </label>
+
+            <textarea
+              id="message"
+              rows="4"
+              placeholder="Tell us what you need..."
+              required
+            ></textarea>
+
+            <small id="messageMessage"></small>
+
+          </div>
+
+
+          <button
+            type="submit"
+            class="form-submit"
+          >
+            Send Message
+          </button>
+
+          <p id="formStatus"></p>
+
+        </form>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= CTA ================= -->
+    <section class="cta">
+
+      <div class="cta-card">
+
+        <div class="cta-content">
+
+          <h2>
+            Ready to boost your<br>
+            team productivity?
+          </h2>
+
+          <p class="cta-text">
+            Join thousands of teams already using FlowSync
+            to get more done every day.
+          </p>
+
+        </div>
+
+
+        <div class="cta-buttons">
+
+          <a
+            href="#contact"
+            class="cta-primary"
+          >
+            Get Started Free
+          </a>
+
+          <button
+            class="cta-secondary"
+            id="ctaDemoBtn"
+            type="button"
+          >
+            Watch Demo
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- ================= DEMO MODAL ================= -->
+  <div
+    class="modal"
+    id="demoModal"
+    hidden
+  >
+
+    <div class="modal-content">
+
+      <button
+        class="modal-close"
+        id="modalClose"
+        type="button"
+      >
+        ×
+      </button>
+
+      <h2>
+        FlowSync Demo
+      </h2>
+
+      <p>
+        Explore the FlowSync product demo and discover how our smart workflow tools help your team stay organized and productive.
+      </p>
+
+      <button
+        class="primary-btn"
+        id="modalDone"
+        type="button"
+      >
+        Close Demo
+      </button>
+
     </div>
-  </section>
 
-  <!-- FOOTER -->
-  <footer class="footer" id="footer">
+  </div>
+
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+
     <div class="footer-container">
+
       <div class="footer-brand">
-        <div class="logo">
-          <img src="./assets/logo.png" alt="FlowSync logo">
-        </div>
+
+        <a href="#home" class="logo">
+          <img
+            src="./assets/logo.png"
+            alt="FlowSync logo"
+          >
+        </a>
+
         <p>
-          FlowSync is the all-in-one workspace that helps teams plan, track, and collaborate effortlessly.
+          FlowSync is the all-in-one workspace that helps
+          teams plan, track, and collaborate effortlessly.
         </p>
+
         <div class="social-links">
-          <a href="#">📷</a>
-          <a href="#">f</a>
-          <a href="#">in</a>
-          <a href="#">𝕏</a>
+          <a href="#" aria-label="Instagram">📷</a>
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="#" aria-label="X">𝕏</a>
         </div>
+
       </div>
+
 
       <div class="footer-links">
+
         <div class="footer-column">
-          <h4>Quick Links</h4>
+
+          <h4>
+            Quick Links
+          </h4>
+
           <a href="#home">Home</a>
           <a href="#features">Features</a>
-          <a href="#">Pricing</a>
+          <a href="#faq">FAQ</a>
           <a href="#testimonials">Testimonials</a>
-          <a href="#">Contact</a>
+          <a href="#contact">Contact</a>
+
         </div>
 
-        <div class="footer-column">
-          <h4>Product</h4>
-          <a href="#">Tasks</a>
-          <a href="#">Projects</a>
-          <a href="#">Integrations</a>
-          <a href="#">Updates</a>
-        </div>
 
         <div class="footer-column">
-          <h4>Company</h4>
-          <a href="#">About Us</a>
-          <a href="#">Blog</a>
-          <a href="#">Careers</a>
-          <a href="#">Privacy Policy</a>
+
+          <h4>
+            Product
+          </h4>
+
+          <a href="#features">Tasks</a>
+          <a href="#features">Projects</a>
+          <a href="#features">Integrations</a>
+          <a href="#features">Updates</a>
+
         </div>
+
+
+        <div class="footer-column">
+
+          <h4>
+            Company
+          </h4>
+
+          <a href="#contact">About Us</a>
+          <a href="#faq">Blog</a>
+          <a href="#contact">Careers</a>
+          <a href="#contact">Privacy Policy</a>
+
+        </div>
+
       </div>
+
     </div>
+
 
     <div class="footer-bottom">
-      <p>© 2026 FlowSync. All rights reserved.</p>
+
+      <p>
+        © 2026 FlowSync. All rights reserved.
+      </p>
+
     </div>
+
   </footer>
+
+
+  <!-- JavaScript -->
+  <script src="script.js" defer></script>
 
 </body>
 </html>
